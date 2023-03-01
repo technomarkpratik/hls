@@ -1,0 +1,78 @@
+/*----------------- responsive variations -----------------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #EDEDED;
+}
+
+picture {
+  display: block;
+}
+
+.invoice {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+}
+.invoice .invoice-detail {
+  padding: 40px;
+}
+.invoice .invoice-detail .logo-info p {
+  margin-bottom: 0;
+}
+.invoice .invoice-detail .logo-info h6 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.invoice .invoice-detail .bill-info h6 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.invoice .invoice-detail .bill-info address {
+  font-size: 14px;
+}
+.invoice .invoice-detail .bill-info address p {
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+.invoice .invoice-list-box {
+  padding: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.invoice .invoice-list-box .list-group .list-group-item {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  padding: 20px;
+}
+.invoice .invoice-list-box .list-group .list-group-item:first-child {
+  font-size: 20px;
+}/*# sourceMappingURL=styles.css.map */

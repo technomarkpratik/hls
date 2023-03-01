@@ -1,0 +1,86 @@
+@import "./media";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+// basic css
+$primary : rgba(0, 0, 0, 0.8);
+* {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #EDEDED;
+}
+picture {
+  display: block;
+}
+.invoice{
+  background-color: #fff;
+  border:  1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  .invoice-detail{
+    padding: 40px;
+    .logo-info{
+      p{
+        margin-bottom: 0;
+      }
+      h6{
+        font-size: 20px;
+        margin-bottom: 10px;
+       color: $primary;
+       }
+    }
+    .bill-info{
+      h6{
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      address{
+        font-size: 14px;
+        p{
+          margin-bottom: 3px;
+          font-weight: bold;
+         color: $primary;
+        }
+        
+      }
+    }
+  }
+  .invoice-list-box{
+    padding: 40px;
+    border-top:  1px solid rgba(0, 0, 0, 0.12);
+    .list-group{
+      .list-group-item{
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        color: $primary;
+        font-size: 15px;
+        padding: 20px;
+        &:first-child{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
