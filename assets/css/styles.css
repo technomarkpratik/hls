@@ -26,7 +26,7 @@ body {
   position: relative;
   outline: none;
   box-sizing: border-box;
-  background-color: #EDEDED;
+  background-color: #ededed;
 }
 
 picture {
@@ -35,19 +35,25 @@ picture {
 
 .invoice {
   background-color: #fff;
+  list-style: none;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 10px;
+  display: block;
 }
-.invoice .invoice-detail {
+.invoice > li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   padding: 40px;
 }
-.invoice .invoice-detail .logo-info p {
-  margin-bottom: 0;
+.invoice > li:last-child {
+  border-bottom: 0;
 }
 .invoice .invoice-detail .logo-info h6 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 15px;
   color: rgba(0, 0, 0, 0.8);
+}
+.invoice .invoice-detail .logo-info p {
+  margin-bottom: 3px;
 }
 .invoice .invoice-detail .bill-info h6 {
   font-size: 20px;
@@ -61,10 +67,6 @@ picture {
   font-weight: bold;
   color: rgba(0, 0, 0, 0.8);
 }
-.invoice .invoice-list-box {
-  padding: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
-}
 .invoice .invoice-list-box .list-group .list-group-item {
   display: flex;
   justify-content: space-between;
@@ -75,4 +77,34 @@ picture {
 }
 .invoice .invoice-list-box .list-group .list-group-item:first-child {
   font-size: 20px;
+}
+.invoice .attachment_total {
+  display: flex;
+  justify-content: space-between;
+}
+.invoice .attachment_total .attachment_box h6 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.invoice .attachment_total .attachment_box .download_pdf {
+  display: inline-block;
+  background-color: #F5F5F5;
+  padding: 10px;
+  border-radius: 10px;
+}
+.invoice .attachment_total .amount_total_box ul {
+  list-style: none;
+}
+.invoice .attachment_total .amount_total_box ul li {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  padding: 10px;
+}
+.invoice .attachment_total .amount_total_box ul li:last-child {
+  font-size: 20px;
+  font-weight: 700;
 }/*# sourceMappingURL=styles.css.map */

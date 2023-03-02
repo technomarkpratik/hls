@@ -15,36 +15,59 @@
       <div class="row">
          <div class="col-md-3"></div>
          <div class="col-md-9 p-3">
-            <div class="invoice">
-               <div class="invoice-detail justify-content-between row">
-                  <div class="col-sm-12 col-md-8 logo-info">
-                     <a href="#" title="logo" class="d-block mb-4">
-                        <img src="./assets/image/hls.png" alt="logo">
-                     </a>
-                     <h6> 10153</h6>
-                     <p> Invoice date</p>
-                     <p> 12/15/2023</p>
-                  </div>
-                  <div class="col-sm-12 col-md-4 bill-info mt-sm-3 mt-md-0">
-                     <h6> Bill to</h6>
-                     <address>
-                        <p> Atsushi Yanagishita </p>
-                        <p> Nissin Foods (USA) Co., Inc </p>
-                        <p> Nissin Foods (USA) Co., Inc2001 W. Rosecrans AvenueGardena, CA 90249 </p>
-                        <p> Info@nisin.foods.com </p>
-                        <p> (555) 555-1234 </p>
-                     </address>
-                  </div>
-               </div>
-               <div class="invoice-list-box">
+            <ul class="invoice">
+               <li class="invoice-detail">
+                  <div class="row justify-content-between">
+                     <div class="col-sm-12 col-md-8">
+                        <div class="logo-info">
+                        <a href="#" title="logo" class="d-block mb-4">
+                           <img src="./assets/image/hls.png" alt="logo">
+                        </a>
+                        <h6> 10153</h6>
+                        <p> Invoice date</p>
+                        <p> 12/15/2023</p>
+                     </div>
+                     </div>
+                     <div class="col-sm-12 col-md-4">
+                        <div class="bill-info">
+                        <h6> Bill to</h6>
+                        <address>
+                           <p> Atsushi Yanagishita </p>
+                           <p> Nissin Foods (USA) Co., Inc </p>
+                           <p> Nissin Foods (USA) Co., Inc2001 W. Rosecrans AvenueGardena, CA 90249 </p>
+                           <p> Info@nisin.foods.com </p>
+                           <p> (555) 555-1234 </p>
+                        </address>
+                     </div>
+                     </div>
+                  </div>                
+               </li>
+               <li class="invoice-list-box">
                   <ul class="list-group">
                      <li class="list-group-item"><span> Users and Services</span> <span>Amount</span></li>
                      <li class="list-group-item"><span> John Charles</span> <span>$ 3900</span></li>
                      <li class="list-group-item"><span> Michael Smith</span> <span>$ 2000</span></li>
                      <li class="list-group-item"><span> Joseph</span> <span>$ 3000</span></li>
                   </ul>
-               </div>
-            </div>
+               </li>
+               <li class="attachment_total row justify-content-between">
+                  <div class="attachment_box col-sm-12 col-md-6">
+                     <h6>Attachments</h6>
+                     <a href="./directory/yourfile.pdf" class="download_pdf" download>Download the pdf <i class=""></i></a>
+                     <h6>notes</h6>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nulla iste similique, eius minus alias libero fuga neque voluptas? Illum doloremque voluptate iusto eius amet odit libero cupiditate eos. Magnam.</p>
+                     <h6>terms and condition</h6>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque itaque nesciunt facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit voluptate quibusdam tempore provident ab nisi officia dolores.</p>
+                  </div>
+                  <div class="amount_total_box col-sm-12 col-md-4 mt-sm-3 mt-md-0">
+                     <ul>
+                        <li><span>Sub Total</span> <span>$ 8,900</span></li>
+                        <li><span>Sub Total</span> <span>$ 8,900</span></li>
+                        <li><span> Sub Total</span> <span>$ 8,900</span></li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
          </div>
       </div>
    </div>
