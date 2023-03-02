@@ -90,8 +90,19 @@ picture {
 .invoice .attachment_total .attachment_box .download_pdf {
   display: inline-block;
   background-color: #F5F5F5;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+}
+.invoice .attachment_total .attachment_box .download_pdf img {
+  width: 20px;
+  margin-right: 10px;
+}
+.invoice .attachment_total .attachment_box .download_pdf i {
+  margin-left: 10px;
+  font-weight: 600;
 }
 .invoice .attachment_total .amount_total_box ul {
   list-style: none;

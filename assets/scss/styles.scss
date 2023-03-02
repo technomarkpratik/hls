@@ -99,8 +99,19 @@ picture {
         .download_pdf{
           display: inline-block;
           background-color: #F5F5F5;
-          padding: 10px;
-          border-radius: 10px;
+          padding: 10px 15px;
+          border-radius: 20px;
+          margin-bottom: 15px;
+          font-weight: 600;
+          color: $primary;
+          img{
+            width: 20px;
+            margin-right: 10px;
+          }
+          i{
+           margin-left: 10px;
+          font-weight: 600;
+          }
         }
       }
       .amount_total_box {
