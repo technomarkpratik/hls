@@ -4,17 +4,15 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <title>HLS</title> -->
+   <title>HLS</title>
    <link rel="icon" type="image/x-icon" href="assets/image/cropped-favicon-32x32-1.png">
 <style>
 * {
   outline: none;
 }
-
 a {
   text-decoration: none;
 }
-
 ol,
 ul,
 h1,
@@ -26,7 +24,6 @@ h6 {
   margin: 0;
   padding: 0;
 }
-
 body{
    margin: 0;
    padding: 0;
@@ -38,11 +35,11 @@ body{
 }
 .main{
    max-width: 100%;
-   height: 100vh;
+   height: calc(100vh - 2px);
    background-color: #fff; 
    border-radius: 10px;
    position: relative;
-   box-shadow: 0px 3px 3px #ddd;
+   border: 1px solid rgba(0, 0, 0, 0.12);
 }
 header{
  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -51,62 +48,60 @@ header{
  padding: 20px;
 
 }
-.header_part_one_logo_info{
+header .header_part_one_logo_info{
    flex: 1;
 }
-.header_part_one_logo_info img{
+header .header_part_one_logo_info img{
    display: inline-block; width:170px; margin-bottom: 20px;
 }
-.header_part_one_logo_info h3{
+header .header_part_one_logo_info h3{
    color: rgba(0, 0, 0, 0.8); font-size: 22px;
 }
-.header_part_one_logo_info p{
+header .header_part_one_logo_info p{
    margin: 7px 0; color: rgba(0, 0, 0, 0.8); font-weight: 600;
 }
-/* .header_part_two_bill_info{
-} */
-.header_part_two_bill_info h3{
+
+header .header_part_two_bill_info h3{
    color: rgba(0, 0, 0, 0.8); font-weight: 700;
+   text-transform: capitalize;
 }
-.header_part_two_bill_info address{
+header .header_part_two_bill_info address{
    font-style: normal;
 }
-.header_part_two_bill_info address p{
+header .header_part_two_bill_info address p{
    margin: 7px 0; color: rgba(0, 0, 0, 0.8); font-weight: 500;
 }
 .invoice_body{
    padding: 20px;
-position: relative;
-
+   position: relative;
 }
 .invoice_body .user_list{
    border:1px solid rgba(0, 0, 0, 0.12);
     list-style-type: none; padding-left: 0;
-    border-radius: 10px; 
+    border-radius: 5px; 
 }
 .invoice_body .user_list li:first-child{
-   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
    padding: 15px;
-   display: flex;
-   justify-content: space-between;
-   font-size: 20px;
+   font-size: 18px;
    font-weight: 700;
-   color: rgba(0, 0, 0, 0.8);
 }
 .invoice_body .user_list li{
-   border-bottom: 1px solid rgba(0, 0, 0, 0.12); padding: 15px; display: flex; justify-content: space-between; font-size: 16px; font-weight: 700; color: rgba(0, 0, 0, 0.8);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12); padding: 13px; display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; color: rgba(0, 0, 0, 0.8);
+}
+.invoice_body .user_list li:last-child{
+   border-bottom: 0;
 }
 .invoice_body .notes_total_detali_bx{
    display: flex;
    justify-content: space-between;
-   padding: 20px;
+   padding: 20px 15px;
 }
 .invoice_body .notes_total_detali_bx .notes_box{
    padding-right: 20px;
    flex: 1;
 }
 .invoice_body .notes_total_detali_bx .notes_box h3{
-   font-size: 20px; color: rgba(0, 0, 0, 0.8); text-transform: capitalize; margin:0;
+   font-size: 18px; color: rgba(0, 0, 0, 0.8); text-transform: capitalize; margin:0;
 }
 .invoice_body .notes_total_detali_bx .notes_box p{
    color:rgba(0, 0, 0, 0.8);
@@ -115,10 +110,10 @@ position: relative;
    width: 40%;
 }
 .invoice_body .notes_total_detali_bx .total_detail p{
-   padding:8px 0;margin:0; display: flex; justify-content: space-between; font-size: 14px; font-weight: 600; color: rgba(0, 0, 0, 0.8);
+   margin: 0 0 15px 0; display: flex; justify-content: space-between; font-size: 16px; font-weight: 600; color: rgba(0, 0, 0, 0.8);   text-transform: capitalize;
 }
 .invoice_body .notes_total_detali_bx .total_detail h3{
-padding:10px 0;margin:0; display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; color: rgba(0, 0, 0, 0.8);
+ display: flex; justify-content: space-between; font-size: 20px; font-weight: 700; color: rgba(0, 0, 0, 0.8);
 }
 
 footer{
@@ -139,7 +134,7 @@ footer p{
    margin: 0;
 }
 footer img{
- width:150px;
+ width:70px;
 }
 </style>
 
@@ -166,7 +161,7 @@ footer img{
 </header>
 <section class="invoice_body">
    <ul class="user_list">
-      <li><span> Users and Services</span> <span>Amount</span></li>
+      <li><span> Users</span> <span>Amount</span></li>
       <li><span> John Charles</span> <span>$ 3900</span></li>
       <li><span> Michael Smith</span> <span>$ 2000</span></li>
       <li><span> Joseph</span> <span>$ 3000</span></li>
@@ -188,7 +183,7 @@ footer img{
 </section>
 <footer>
    <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/footer_logo.png" alt="Footer Logo">
-   <p style="">Page 1</p>
+   <span>Page 1</span>
 </footer>
 </div>
 </body>
