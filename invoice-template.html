@@ -34,16 +34,43 @@
          position: relative;
          outline: none;
          box-sizing: border-box;
-         background-color: #ededed;
+         background-color: #fff;
          font-family: Arial, Helvetica, sans-serif;
       }
 
-      .main {
-         max-width: 100%;
-         background-color: #fff;
-         border-radius: 10px;
+      .header,
+      .header-space,
+      .footer,
+      .footer-space {
+         height: 80px;
+         color: #000;
+         margin-top: 0px;
+      }
+
+      table {
+         width: 100%;
          position: relative;
       }
+
+      .header {
+         position: fixed;
+         top: 0;
+      }
+
+      .footer {
+         position: fixed;
+         padding: 0 20px;
+         margin: 0 auto;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         width: calc(100% - 40px);
+         display: flex;
+         justify-content: space-between;
+         border-top: 1px solid rgba(0, 0, 0, 0.12);
+         align-items: center;
+      }
+
       header {
          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
          display: flex;
@@ -95,7 +122,7 @@
          position: relative;
 
       }
-      
+
       .invoice_body .user_list {
          border: 1px solid rgba(0, 0, 0, 0.12);
          list-style-type: none;
@@ -122,10 +149,13 @@
       .invoice_body .user_list li:last-child {
          border-bottom: 0;
       }
-      .second .user_list li{
+
+      .second .user_list li {
          border: 0;
       }
-      .second .user_list li:nth-child(1) , .second .user_list li:nth-child(2){
+
+      .second .user_list li:nth-child(1),
+      .second .user_list li:nth-child(2) {
          border-bottom: 1px solid rgba(0, 0, 0, 0.12);
       }
 
@@ -173,237 +203,231 @@
          color: rgba(0, 0, 0, 0.8);
       }
 
-      footer {
-         padding: 20px;
-         margin: 0 auto;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         width: calc(100% - 80px);
-         display: flex;
-         justify-content: space-between;
-         border-top: 1px solid rgba(0, 0, 0, 0.12);
-         position: fixed;
-         align-items: center;
-      }
-
-      footer p {
+      .footer p {
          text-align: right;
          color: rgba(0, 0, 0, 0.8);
          margin: 0;
       }
 
-      footer img {
+      .footer img {
          width: 70px;
       }
 
       @media print {
-         @page {
-            size: A4;
-            margin: 30px 30px 20px 30px;
-            border: 1px solid rgba(0, 0, 0, 0.12);
-         }
-        .main .invoice_box {
+         .main table {
             page-break-after: always;
          }
-         .main .invoice_box:last-child {
-            page-break-after: avoid;
-         }
+      }
 
-         .body_sec .invoice_body {
-            page-break-after: always;
-         }
-
-         .body_sec .invoice_body:last-child {
-            page-break-after: avoid;
-         }
-
-         footer {
-            padding: 20px 20px 20px 20px;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: calc(100% - 80px);
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid rgba(0, 0, 0, 0.12);
-            position: fixed;
-            align-items: center;
-            page-break-before: always;
-         }
+      .main table:last-child {
+         page-break-after: avoid;
       }
    </style>
 </head>
 
 <body>
    <div class="main">
-   <div class="invoice_box">
-      <header>
-         <div class="header_part_one_logo_info">
-            <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/hls.png" alt="logo">
-            <h3> 10153</h3>
-            <p> Invoice date</p>
-            <p> 12/15/2023</p>
-         </div>
-         <div class="header_part_two_bill_info">
-            <h3> Bill to</h3>
-            <address>
-               <p> Atsushi Yanagishita </p>
-               <p> Nissin Foods (USA) Co., Inc </p>
-               <p> 2001 W. Rosecrans AvenueGardena, CA 90249 </p>
-               <p> Info@nisin.foods.com </p>
-               <p> (555) 555-1234 </p>
-            </address>
-         </div>
-      </header>
-      <div class="body_sec">
-         <section class="invoice_body">
-            <ul class="user_list">
-               <li><span> Users</span> <span>Amount</span></li>
-               <li><span> John Charles</span> <span>$ 3900</span></li>
-               <li><span> Michael Smith</span> <span>$ 2000</span></li>
-               <li><span> Joseph</span> <span>$ 3000</span></li>
-              
-            </ul>
+      <table>
+         <tbody>
+            <tr>
+               <td>
+                  <div class="invoice_box">
+                     <header>
+                        <div class="header_part_one_logo_info">
+                           <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/hls.png" alt="logo">
+                           <h3> 10153</h3>
+                           <p> Invoice date</p>
+                           <p> 12/15/2023</p>
+                        </div>
+                        <div class="header_part_two_bill_info">
+                           <h3> Bill to</h3>
+                           <address>
+                              <p> Atsushi Yanagishita </p>
+                              <p> Nissin Foods (USA) Co., Inc </p>
+                              <p> 2001 W. Rosecrans AvenueGardena, CA 90249 </p>
+                              <p> Info@nisin.foods.com </p>
+                              <p> (555) 555-1234 </p>
+                           </address>
+                        </div>
+                     </header>
+                     <div class="body_sec">
+                        <section class="invoice_body">
+                           <ul class="user_list">
+                              <li><span> Users</span> <span>Amount</span></li>
+                              <li><span> John Charles</span> <span>$ 3900</span></li>
+                              <li><span> Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span> Joseph</span> <span>$ 3000</span></li>
+                              <li>------------</li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                           </ul>
 
-            <div class="notes_total_detali_bx">
-               <div class="notes_box">
-                  <h3>notes</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nulla iste similique, eius minus
-                     alias libero fuga neque voluptas? Illum doloremque voluptate iusto eius amet odit libero cupiditate
-                     eos. Magnam.</p>
-                  <h3>terms and condition</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque itaque nesciunt
-                     facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit voluptate quibusdam tempore
-                     provident ab nisi officia dolores.</p>
-               </div>
-               <div class="total_detail">
-                  <p><span>Sub Total</span> <span>$ 8,900</span></p>
-                  <p><span>Discount</span> <span>$ 100</span></p>
-                  <p><span>Shipping charges</span> <span>$ 100</span></p>
-                  <h3><span>Total Amount</span> <span>$ 2,137.5</span></h3>
-               </div>
-            </div>
-         </section>
-      </div>
-   </div>
-   <div class="invoice_box second">
-      <header>
-         <div class="header_part_one_logo_info">
-            <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/hls.png" alt="logo">
-            <h3> 10153</h3>
-            <p> Invoice date</p>
-            <p> 12/15/2023</p>
-         </div>
-         <div class="header_part_two_bill_info">
-            <h3> Bill to</h3>
-            <address>
-               <p> Atsushi Yanagishita </p>
-               <p> Nissin Foods (USA) Co., Inc </p>
-               <p> 2001 W. Rosecrans AvenueGardena, CA 90249 </p>
-               <p> Info@nisin.foods.com </p>
-               <p> (555) 555-1234 </p>
-            </address>
-         </div>
-      </header>
-      <div class="body_sec">
-         <section class="invoice_body">
-            <ul class="user_list">
-               <li><span> John Charles</span> <span>3900</span></li>
-               <li><span># Services</span> <span>Amount</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-            </ul>
-         </section>
-      </div>
-   </div>    
-  
-   <div class="invoice_box second">
-      <header>
-         <div class="header_part_one_logo_info">
-            <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/hls.png" alt="logo">
-            <h3> 10153</h3>
-            <p> Invoice date</p>
-            <p> 12/15/2023</p>
-         </div>
-         <div class="header_part_two_bill_info">
-            <h3> Bill to</h3>
-            <address>
-               <p> Atsushi Yanagishita </p>
-               <p> Nissin Foods (USA) Co., Inc </p>
-               <p> 2001 W. Rosecrans AvenueGardena, CA 90249 </p>
-               <p> Info@nisin.foods.com </p>
-               <p> (555) 555-1234 </p>
-            </address>
-         </div>
-      </header>
-      <div class="body_sec">
-         <section class="invoice_body">
-            <ul class="user_list">
-               <li><span> John Charles</span> <span>3900</span></li>
-               <li><span># Services</span> <span>Amount</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-               <li><span>4 John Charles</span> <span>$ 3900</span></li>
-               <li><span>5 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>6 Joseph</span> <span>$ 3000</span></li>
-               <li><span>7 John Charles</span> <span>$ 3900</span></li>
-               <li><span>8 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>9 Joseph</span> <span>$ 3000</span></li>
-               <li><span>10 John Charles</span> <span>$ 3900</span></li>
-               <li><span>11 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>12 Joseph</span> <span>$ 3000</span></li>
-               <li><span>13 John Charles</span> <span>$ 3900</span></li>
-               <li><span>14 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>15 Joseph</span> <span>$ 3000</span></li>
-               <li><span>16 John Charles</span> <span>$ 3900</span></li>
-               <li><span>17 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>18 Joseph</span> <span>$ 3000</span></li>
-               <li><span>19 John Charles</span> <span>$ 3900</span></li>
-               <li><span>20 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>21 Joseph</span> <span>$ 3000</span></li>
-               <li><span>22 John Charles</span> <span>$ 3900</span></li>
-               <li><span>23 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>24 Joseph</span> <span>$ 3000</span></li>
-               <li><span>1 John Charles</span> <span>$ 3900</span></li>
-               <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
-               <li><span>3 Joseph</span> <span>$ 3000</span></li>
-            </ul>
-         </section>
-      </div>
-   </div>
+                           <div class="notes_total_detali_bx">
+                              <div class="notes_box">
+                                 <h3>notes</h3>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nulla iste
+                                    similique, eius minus
+                                    alias libero fuga neque voluptas? Illum doloremque voluptate iusto eius amet
+                                    odit libero cupiditate
+                                    eos. Magnam.</p>
+                                 <h3>terms and condition</h3>
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque
+                                    itaque nesciunt
+                                    facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit
+                                    voluptate quibusdam tempore
+                                    provident ab nisi officia dolores.</p>
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque
+                                    itaque nesciunt
+                                    facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit
+                                    voluptate quibusdam tempore
+                                    provident ab nisi officia dolores.</p>
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque
+                                    itaque nesciunt
+                                    facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit
+                                    voluptate quibusdam tempore
+                                    provident ab nisi officia dolores.</p>
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque
+                                    itaque nesciunt
+                                    facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit
+                                    voluptate quibusdam tempore
+                                    provident ab nisi officia dolores.</p>
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque
+                                    itaque nesciunt
+                                    facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit
+                                    voluptate quibusdam tempore
+                                    provident ab nisi officia dolores.</p>
+                              </div>
+                              <div class="total_detail">
+                                 <p><span>Sub Total</span> <span>$ 8,900</span></p>
+                                 <p><span>Discount</span> <span>$ 100</span></p>
+                                 <p><span>Shipping charges</span> <span>$ 100</span></p>
+                                 <h3><span>Total Amount</span> <span>$ 2,137.5</span></h3>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+         <tfoot>
+            <tr>
+               <td>
+                  <div class="footer-space">&nbsp;</div>
+               </td>
+            </tr>
+         </tfoot>
+      </table>
+      <table>
+         <tbody>
+            <tr>
+               <td>
+                  <div class="invoice_box second">
+                     <header>
+                        <div class="header_part_one_logo_info">
+                           <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/hls.png" alt="logo">
+                           <h3> 10153</h3>
+                           <p> Invoice date</p>
+                           <p> 12/15/2023</p>
+                        </div>
+                        <div class="header_part_two_bill_info">
+                           <h3> Bill to</h3>
+                           <address>
+                              <p> Atsushi Yanagishita </p>
+                              <p> Nissin Foods (USA) Co., Inc </p>
+                              <p> 2001 W. Rosecrans AvenueGardena, CA 90249 </p>
+                              <p> Info@nisin.foods.com </p>
+                              <p> (555) 555-1234 </p>
+                           </address>
+                        </div>
+                     </header>
+                     <div class="body_sec">
+                        <section class="invoice_body">
+                           <ul class="user_list">
+                              <li><span> John Charles</span> <span>3900</span></li>
+                              <li><span># Services</span> <span>Amount</span></li>
+                              <li><span>1 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>2 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>3 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>4 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>5 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>6 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>7 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>8 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>9 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>10 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>11 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>12 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>13 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>14 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>15 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>16 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>17 Michael Smith</span> <span>$ 2000</span></li>
+                              <li><span>18 Joseph</span> <span>$ 3000</span></li>
+                              <li><span>19 John Charles</span> <span>$ 3900</span></li>
+                              <li><span>20 Michael Smith</span> <span>$ 2000</span></li>
+                           </ul>
 
-   <footer>
+                           <div class="notes_total_detali_bx">
+                              <div class="notes_box">
+                                 <h3>notes</h3>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nulla iste
+                                    similique, eius minus
+                                    alias libero fuga neque voluptas? Illum doloremque voluptate iusto eius amet
+                                    odit libero cupiditate
+                                    eos. Magnam.</p>
+                                 <h3>terms and condition</h3>
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis esse atque
+                                    itaque nesciunt
+                                    facilis ducimus eos voluptas, animi fugit iusto reprehenderit velit
+                                    voluptate quibusdam tempore
+                                    provident ab nisi officia dolores.</p>
+                              </div>
+                              <div class="total_detail">
+                                 <p><span>Sub Total</span> <span>$ 8,900</span></p>
+                                 <p><span>Discount</span> <span>$ 100</span></p>
+                                 <p><span>Shipping charges</span> <span>$ 100</span></p>
+                                 <h3><span>Total Amount</span> <span>$ 2,137.5</span></h3>
+                              </div>
+                           </div>
+                        </section>
+                     </div>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+
+         <tfoot>
+            <tr>
+               <td>
+                  <div class="footer-space">&nbsp;</div>
+               </td>
+            </tr>
+         </tfoot>
+      </table>
+   </div>
+   <footer class="footer">
       <img src="https://raw.githubusercontent.com/technomarkpratik/hls/main/footer_logo.png" alt="Footer Logo">
-      <span>Page 1</span>
+      <span>Page 2</span>
    </footer>
+
 </body>
 
 </html>
